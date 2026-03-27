@@ -124,5 +124,14 @@ const insertVideo = db.prepare(`INSERT INTO videos (title, youtube_url, thumbnai
 videos.forEach(v => insertVideo.run(v.title, v.youtube_url, v.thumbnail_url, v.sort_order));
 console.log('Videos seeded:', videos.length);
 
+// Admin seed
+const bcrypt = require('bcryptjs');
+const adminExists = db.prepare('SELECT id FROM admins WHERE username = ?').get('admin');
+if (!adminExists) {
+  const hash = bcrypt.hashSync('admin123', 10);
+  db.prepare('INSERT INTO admins (username, password) VALUES (?, ?)').run('admin', hash);
+  console.log('Admin seeded: admin / admin123');
+}
+
 console.log('Database seeding complete!');
 process.exit(0);

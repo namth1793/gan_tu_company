@@ -41,6 +41,7 @@ app.use('/api/products',   require('./routes/products'));
 app.use('/api/news',       require('./routes/news'));
 app.use('/api/contact',    require('./routes/contact'));
 app.use('/api/videos',     require('./routes/videos'));
+app.use('/api/admin',      require('./routes/admin'));
 
 app.get('/api/health', (req, res) => res.json({ success: true, message: 'Gan Tu API running', port: PORT }));
 app.get('/',            (req, res) => res.json({ message: 'Gan Tu API', health: '/api/health' }));

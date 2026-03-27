@@ -93,6 +93,7 @@ export default function Footer() {
         <a href="#" className="hover:text-gray-300 transition-colors">Chính sách bảo mật</a>
         {' '}|{' '}
         <a href="#" className="hover:text-gray-300 transition-colors">Điều khoản sử dụng</a>
+        <Link href="/admin" className="ml-3 text-gray-700 hover:text-gray-500 transition-colors opacity-30 hover:opacity-100" title="Admin">🔐</Link>
       </div>
     </footer>
   );

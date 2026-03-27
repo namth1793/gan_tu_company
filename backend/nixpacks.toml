@@ -2,10 +2,10 @@
 nixPkgs = ["nodejs_20", "python3", "gnumake", "gcc"]
 
 [phases.install]
-cmds = ["npm ci --include=dev"]
+cmds = ["npm install"]
 
 [phases.build]
-cmds = ["npm rebuild better-sqlite3"]
+cmds = ["npm rebuild better-sqlite3 --build-from-source"]
 
 [start]
-cmd = "node index.js"
+cmd = "node server.js"

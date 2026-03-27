@@ -20,6 +20,16 @@ html { scroll-behavior: smooth; }
   .line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 }
 
+/* Logo horizontal spin (rotateY) */
+@keyframes spin-y {
+  0%   { transform: perspective(600px) rotateY(0deg); }
+  100% { transform: perspective(600px) rotateY(360deg); }
+}
+.logo-spin-y {
+  animation: spin-y 8s linear infinite;
+  transform-style: preserve-3d;
+}
+
 /* Floating contact animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

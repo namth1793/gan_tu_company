@@ -12,14 +12,12 @@ const navItems = [
 ];
 
 const dropdownCategories = [
-  { label: 'Giày thể thao', href: '/san-pham?cat=giay-the-thao' },
-  { label: 'Giày da nam', href: '/san-pham?cat=giay-da-nam' },
-  { label: 'Giày cao gót', href: '/san-pham?cat=giay-cao-got' },
-  { label: 'Dép & Sandal', href: '/san-pham?cat=dep-sandal' },
-  { label: 'Giày trẻ em', href: '/san-pham?cat=giay-tre-em' },
-  { label: 'Giày vải', href: '/san-pham?cat=giay-vai' },
-  { label: 'Giày bảo hộ', href: '/san-pham?cat=giay-bao-ho' },
-  { label: 'Phụ kiện giày', href: '/san-pham?cat=phu-kien-giay' },
+  { label: 'Máy móc',         href: '/san-pham?cat=may-moc' },
+  { label: 'Thành phẩm',      href: '/san-pham?cat=thanh-pham' },
+  { label: 'Đế giày',         href: '/san-pham?cat=de-giay' },
+  { label: 'Hoá chất',        href: '/san-pham?cat=hoa-chat' },
+  { label: 'Đế sandal',       href: '/san-pham?cat=de-sandal' },
+  { label: 'Sticker - Charm', href: '/san-pham?cat=sticker-charm' },
 ];
 
 export default function Header() {
@@ -36,49 +34,55 @@ export default function Header() {
       <div className="bg-[#271C1C] border-b border-[#3d2a2a]">
         <div className="max-w-[1200px] mx-auto px-3 flex items-center justify-center">
           <nav className="hidden md:flex items-center justify-center">
-            {navItems.map(item => (
-              item.hasDropdown ? (
-                <div key={item.label} className="nav-item relative">
+            {navItems.map((item, idx) => (
+              <div key={item.label} className="flex items-center">
+                {/* Divider trước mỗi item (trừ item đầu tiên) */}
+                {idx > 0 && (
+                  <span className="w-px h-4 bg-white opacity-25 mx-0.5 flex-shrink-0" aria-hidden="true" />
+                )}
+
+                {item.hasDropdown ? (
+                  <div className="nav-item relative">
+                    <Link
+                      href={item.href}
+                      className={`px-5 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap flex items-center gap-1 ${
+                        isActive(item.href)
+                          ? 'text-yellow-400 border-yellow-400'
+                          : 'text-gray-300 hover:text-yellow-400 hover:border-yellow-400 border-transparent'
+                      }`}
+                    >
+                      {item.label} ▾
+                    </Link>
+                    <div className="nav-dropdown absolute top-full left-0 w-52 bg-[#271C1C] border border-[#3d2a2a] rounded shadow-xl z-50 py-1">
+                      {dropdownCategories.map(cat => (
+                        <Link
+                          key={cat.label}
+                          href={cat.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#3d2a2a] hover:text-yellow-400 transition-colors"
+                        >
+                          {cat.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-[#3d2a2a] mt-1 pt-1">
+                        <Link href="/san-pham" className="block px-4 py-2 text-sm font-semibold text-yellow-400 hover:bg-[#3d2a2a] transition-colors">
+                          Xem tất cả sản phẩm →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
                   <Link
                     href={item.href}
-                    className={`px-5 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap flex items-center gap-1 ${
+                    className={`px-5 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                       isActive(item.href)
                         ? 'text-yellow-400 border-yellow-400'
                         : 'text-gray-300 hover:text-yellow-400 hover:border-yellow-400 border-transparent'
                     }`}
                   >
-                    {item.label} ▾
+                    {item.label}
                   </Link>
-                  <div className="nav-dropdown absolute top-full left-0 w-52 bg-[#271C1C] border border-[#3d2a2a] rounded shadow-xl z-50 py-1">
-                    {dropdownCategories.map(cat => (
-                      <Link
-                        key={cat.label}
-                        href={cat.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#3d2a2a] hover:text-yellow-400 transition-colors"
-                      >
-                        {cat.label}
-                      </Link>
-                    ))}
-                    <div className="border-t border-[#3d2a2a] mt-1 pt-1">
-                      <Link href="/san-pham" className="block px-4 py-2 text-sm font-semibold text-yellow-400 hover:bg-[#3d2a2a] transition-colors">
-                        Xem tất cả sản phẩm →
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className={`px-5 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
-                    isActive(item.href)
-                      ? 'text-yellow-400 border-yellow-400'
-                      : 'text-gray-300 hover:text-yellow-400 hover:border-yellow-400 border-transparent'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              )
+                )}
+              </div>
             ))}
           </nav>
 

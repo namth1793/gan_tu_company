@@ -15,13 +15,14 @@ export default function HomePage() {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 space-y-4">
-          <ProductGrid title="GIÀY THỂ THAO" categorySlug="giay-the-thao" limit={8} />
+          <ProductGrid title="MÁY MÓC" categorySlug="may-moc" limit={8} />
           <ProductGrid title="SẢN PHẨM NỔI BẬT" limit={8} />
           <VideoNewsSection />
-          <ProductGrid title="GIÀY DA NAM" categorySlug="giay-da-nam" limit={8} showPagination />
-          <ProductGrid title="GIÀY CAO GÓT" categorySlug="giay-cao-got" limit={8} showPagination />
-          <ProductGrid title="DÉP & SANDAL" categorySlug="dep-sandal" limit={8} />
-          <ProductGrid title="GIÀY TRẺ EM" categorySlug="giay-tre-em" limit={8} showPagination />
+          <ProductGrid title="THÀNH PHẨM" categorySlug="thanh-pham" limit={8} />
+          <ProductGrid title="ĐẾ GIÀY" categorySlug="de-giay" limit={8} showPagination />
+          <ProductGrid title="HOÁ CHẤT" categorySlug="hoa-chat" limit={8} />
+          <ProductGrid title="ĐẾ SANDAL" categorySlug="de-sandal" limit={8} />
+          <ProductGrid title="STICKER - CHARM" categorySlug="sticker-charm" limit={8} showPagination />
           <ContactBanner />
         </div>
       </div>

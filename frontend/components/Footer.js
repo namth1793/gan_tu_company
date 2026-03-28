@@ -16,12 +16,12 @@ export default function Footer() {
             </p>
             <p className="text-sm mb-1.5 flex items-start gap-2">
               <span className="flex-shrink-0">🏭</span>
-              <span><span className="text-gray-400 text-xs">Xưởng SX:</span> 190-192 Quốc lộ 1A, P. Long An, Tây Ninh</span>
+              <span><span className="text-gray-400 text-xs">Kho hàng:</span> 190-192 Quốc lộ 1A, P. Long An, Tây Ninh</span>
             </p>
             <div className="text-sm mb-1.5 space-y-0.5">
               <div className="text-gray-400 text-xs uppercase tracking-wide mb-1">🇻🇳 Việt Nam</div>
               <div>📞 <a href="tel:0902487928" className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors">0902 487 928</a></div>
-              <div>📞 <a href="tel:0938 836 060" className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors">0938 836 060</a></div>
+              <div>📞 <a href="tel:0938836060" className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors">0938 836 060</a></div>
             </div>
             <div className="text-sm mb-1.5 space-y-0.5">
               <div className="text-gray-400 text-xs uppercase tracking-wide mb-1">🇨🇳 Trung Quốc</div>
@@ -32,7 +32,6 @@ export default function Footer() {
               📧 <a href="mailto:info@gantu.vn" className="hover:text-white transition-colors">info@gantu.vn</a>
             </p>
             <p className="text-sm">🕐 T2-T7: 7:30 – 17:30 | Hỗ trợ 24/7</p>
-            {/* Social */}
             <div className="flex items-center gap-2 mt-4">
               <a href="#" className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors text-xs font-bold text-white">f</a>
               <a href="#" className="w-8 h-8 bg-red-600 rounded flex items-center justify-center hover:bg-red-700 transition-colors text-xs font-bold text-white">YT</a>
@@ -49,14 +48,13 @@ export default function Footer() {
                 { label: 'Giới thiệu', href: '/gioi-thieu' },
                 { label: 'Sản phẩm', href: '/san-pham' },
                 { label: 'Tin tức', href: '/tin-tuc' },
+                { label: 'Nhận báo giá', href: '/nhan-bao-gia' },
                 { label: 'Liên hệ', href: '/lien-he' },
-                { label: 'Chính sách đổi trả', href: '/lien-he' },
-                { label: 'Hướng dẫn chọn size', href: '/lien-he' },
-                { label: 'Chăm sóc giày dép', href: '/tin-tuc' },
+                { label: 'Dịch vụ', href: '/dich-vu' },
               ].map(l => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
-                    <span className="text-green-600">▸</span> {l.label}
+                    <span className="text-yellow-600">▸</span> {l.label}
                   </Link>
                 </li>
               ))}
@@ -68,17 +66,16 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-3 text-sm uppercase border-b border-gray-700 pb-2">Danh mục sản phẩm</h4>
             <ul className="space-y-1.5 text-sm">
               {[
-                { label: 'Giày thể thao', slug: 'giay-the-thao' },
-                { label: 'Giày da nam', slug: 'giay-da-nam' },
-                { label: 'Giày cao gót', slug: 'giay-cao-got' },
-                { label: 'Dép & sandal', slug: 'dep-sandal' },
-                { label: 'Giày trẻ em', slug: 'giay-tre-em' },
-                { label: 'Giày vải', slug: 'giay-vai' },
-                { label: 'Phụ kiện giày', slug: 'phu-kien-giay' },
+                { label: 'Máy móc',         slug: 'may-moc' },
+                { label: 'Thành phẩm',      slug: 'thanh-pham' },
+                { label: 'Đế giày',         slug: 'de-giay' },
+                { label: 'Hoá chất',        slug: 'hoa-chat' },
+                { label: 'Đế sandal',       slug: 'de-sandal' },
+                { label: 'Sticker - Charm', slug: 'sticker-charm' },
               ].map(c => (
                 <li key={c.label}>
                   <Link href={`/san-pham?cat=${c.slug}`} className="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
-                    <span className="text-green-600">▸</span> {c.label}
+                    <span className="text-yellow-600">▸</span> {c.label}
                   </Link>
                 </li>
               ))}

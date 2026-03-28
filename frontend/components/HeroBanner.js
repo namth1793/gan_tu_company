@@ -3,22 +3,28 @@ import { useState, useEffect } from 'react';
 
 const slides = [
   {
-    title: 'GIÀY DÉP THỜI TRANG - CHẤT LƯỢNG CAO',
-    sub: 'Hơn 500+ mẫu giày dép nam nữ trẻ em – Freeship toàn quốc',
-    bg: 'linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #388e3c 100%)',
-    badge: '👟 Thời trang giày dép',
+    title: 'MÁY MÓC & NGUYÊN PHỤ LIỆU SẢN XUẤT GIÀY',
+    sub: 'Máy may, máy cắt da, máy dán đế – Nhập khẩu trực tiếp từ Nhật, Đài Loan, Trung Quốc',
+    bg: 'linear-gradient(135deg, #271C1C 0%, #3d2a2a 60%, #4a3232 100%)',
+    badge: '⚙️ Máy móc công nghiệp',
+    icon1: '⚙️',
+    icon2: '🔩',
   },
   {
-    title: 'BỘ SƯU TẬP MỚI 2026',
-    sub: 'Giày thể thao, giày da, cao gót, dép sandal – Cập nhật liên tục',
-    bg: 'linear-gradient(135deg, #0d47a1 0%, #1565c0 60%, #1976d2 100%)',
-    badge: '✨ Bộ sưu tập mới',
+    title: 'ĐẾ GIÀY & ĐẾ SANDAL ĐA DẠNG',
+    sub: 'Đế cao su SBR, PVC, TPR, EVA nén, TR, da bò – Đế sandal EVA, cork, memory foam',
+    bg: 'linear-gradient(135deg, #1a3a1a 0%, #1b5e20 60%, #2e7d32 100%)',
+    badge: '🔲 Đế giày chuyên dụng',
+    icon1: '🔲',
+    icon2: '🩴',
   },
   {
-    title: 'FREESHIP TOÀN QUỐC',
-    sub: 'Đổi trả miễn phí trong 7 ngày nếu không vừa size',
-    bg: 'linear-gradient(135deg, #4a148c 0%, #6a1b9a 60%, #7b1fa2 100%)',
-    badge: '🚚 Giao hàng nhanh',
+    title: 'HOÁ CHẤT DÁN ĐẾ & STICKER CHARM',
+    sub: 'Keo PU 2 thành phần, keo neoprene, primer, IPA – Sticker phản quang, charm kim loại, patch thêu',
+    bg: 'linear-gradient(135deg, #0d2b45 0%, #1565c0 60%, #1976d2 100%)',
+    badge: '🧪 Hoá chất & Phụ kiện',
+    icon1: '🧪',
+    icon2: '✨',
   },
 ];
 
@@ -37,10 +43,10 @@ export default function HeroBanner() {
       className="relative overflow-hidden rounded"
       style={{ height: '200px', background: slide.bg, transition: 'background 0.5s ease' }}
     >
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-4 right-8 text-white text-8xl">👟</div>
-        <div className="absolute bottom-4 right-24 text-white text-5xl">👠</div>
+      {/* Background decorative icons */}
+      <div className="absolute inset-0 opacity-10 select-none pointer-events-none">
+        <div className="absolute top-4 right-8 text-white text-8xl">{slide.icon1}</div>
+        <div className="absolute bottom-4 right-24 text-white text-5xl">{slide.icon2}</div>
       </div>
 
       <div className="absolute inset-0 flex flex-col justify-center px-8">
@@ -50,19 +56,19 @@ export default function HeroBanner() {
         <h2 className="text-white text-xl md:text-2xl font-black uppercase mb-2 leading-tight drop-shadow">
           {slide.title}
         </h2>
-        <p className="text-green-100 text-sm mb-4">{slide.sub}</p>
+        <p className="text-gray-200 text-sm mb-4">{slide.sub}</p>
         <div className="flex gap-2">
           <a
             href="/san-pham"
-            className="bg-white text-[#2e7d32] px-4 py-1.5 rounded text-sm font-bold hover:bg-green-50 transition-colors shadow"
+            className="bg-white text-[#271C1C] px-4 py-1.5 rounded text-sm font-bold hover:bg-yellow-50 transition-colors shadow"
           >
             Xem sản phẩm
           </a>
           <a
-            href="/lien-he"
+            href="/nhan-bao-gia"
             className="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded text-sm font-bold hover:bg-yellow-300 transition-colors shadow"
           >
-            Tư vấn size
+            Nhận báo giá
           </a>
         </div>
       </div>

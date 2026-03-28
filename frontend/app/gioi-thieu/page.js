@@ -1,23 +1,23 @@
 import Sidebar from '@/components/Sidebar';
 
 export const metadata = {
-  title: 'Giới thiệu - Gan Tu Giày Dép Thời Trang',
-  description: 'Gan Tu chuyên cung cấp giày dép thời trang chất lượng cao, hơn 10 năm kinh nghiệm, 50.000+ khách hàng tin tưởng',
+  title: 'Giới thiệu - Gan Tu | Máy Móc & Nguyên Phụ Liệu Sản Xuất Giày',
+  description: 'Gan Tu chuyên cung cấp máy móc, đế giày, hoá chất dán đế, đế sandal, sticker charm cho ngành sản xuất giày. Hơn 10 năm kinh nghiệm, đối tác Nhật - Đài Loan - Trung Quốc.',
 };
 
 export default function GioiThieuPage() {
   const milestones = [
-    { year: '2014', title: 'Thành lập', desc: 'Gan Tu được thành lập tại TP.HCM, chuyên bán giày dép thời trang' },
-    { year: '2017', title: 'Mở rộng', desc: 'Mở rộng sang giày thể thao, giày bảo hộ và phụ kiện giày' },
-    { year: '2020', title: 'Bán hàng online', desc: 'Ra mắt website và kênh bán hàng online, phủ sóng toàn quốc' },
-    { year: '2023', title: 'Toàn quốc', desc: 'Mở showroom Hà Nội và Đà Nẵng, đạt 30.000 khách hàng thân thiết' },
-    { year: '2026', title: 'Hôm nay', desc: 'Hơn 50.000 khách hàng, 500+ mẫu giày dép, freeship toàn quốc' },
+    { year: '2014', title: 'Thành lập', desc: 'Gan Tu thành lập tại TP.HCM, chuyên nhập khẩu và phân phối nguyên phụ liệu sản xuất giày' },
+    { year: '2017', title: 'Mở rộng kho', desc: 'Khai trương kho hàng 3.000m² tại Tây Ninh, tăng năng lực lưu trữ và phân phối' },
+    { year: '2019', title: 'Máy móc thiết bị', desc: 'Mở rộng sang phân phối máy móc thiết bị sản xuất giày: máy may, máy cắt, máy dán đế' },
+    { year: '2022', title: 'Đối tác Trung Quốc', desc: 'Thiết lập văn phòng đại diện tại Trung Quốc, kết nối trực tiếp nhà máy sản xuất' },
+    { year: '2026', title: 'Hôm nay', desc: 'Hơn 1.500 khách hàng nhà máy, 200+ mã sản phẩm, phủ khắp các tỉnh thành sản xuất giày' },
   ];
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 pt-3 pb-6">
       {/* Breadcrumb */}
-      <div className="bg-[#2e7d32] text-white text-xs px-3 py-1.5 rounded mb-3">
+      <div className="bg-[#271C1C] text-white text-xs px-3 py-1.5 rounded mb-3">
         <a href="/" className="hover:underline">Trang chủ</a>
         <span className="mx-1">»</span>
         <span>Giới thiệu</span>
@@ -29,44 +29,42 @@ export default function GioiThieuPage() {
         <div className="flex-1 min-w-0 space-y-4">
           {/* Main intro */}
           <div className="bg-white border border-gray-200 rounded p-5">
-            <h1 className="text-base font-bold uppercase border-b-2 border-[#2e7d32] pb-2 mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-[#2e7d32] rounded-sm inline-block"></span>
+            <h1 className="text-base font-bold uppercase border-b-2 border-[#271C1C] pb-2 mb-4 flex items-center gap-2">
+              <span className="w-1 h-5 bg-[#271C1C] rounded-sm inline-block"></span>
               Giới thiệu công ty
             </h1>
 
             <div className="flex gap-5">
               <div className="flex-1 text-sm text-gray-700 space-y-3">
-                <p className="text-base font-bold text-[#2e7d32]">CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI GAN TU</p>
+                <p className="text-base font-bold text-[#271C1C]">CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI GAN TU</p>
                 <p>
-                  Gan Tu được thành lập năm 2014, chuyên cung cấp giày dép thời trang chất lượng cao cho khách hàng trên toàn quốc. Chúng tôi mang đến hàng trăm mẫu giày dép từ thể thao, da, cao gót đến trẻ em với giá cả hợp lý.
+                  Gan Tu được thành lập năm 2014, chuyên cung cấp máy móc thiết bị và nguyên phụ liệu cho ngành sản xuất giày dép. Với hơn 10 năm kinh nghiệm, chúng tôi là đầu mối nhập khẩu và phân phối uy tín, kết nối trực tiếp nhà sản xuất tại Nhật Bản, Đài Loan và Trung Quốc với các nhà máy giày tại Việt Nam.
                 </p>
                 <p>
-                  Với hơn 10 năm kinh nghiệm, Gan Tu tự hào là địa chỉ tin cậy của hơn 50.000 khách hàng, từ người tiêu dùng cá nhân đến các đại lý phân phối trên toàn quốc.
-                </p>
-                <p>
-                  Gan Tu cam kết cung cấp sản phẩm chính hãng, chất lượng cao, giá cạnh tranh, kèm chính sách freeship và đổi trả linh hoạt trong 7 ngày.
+                  Gan Tu hiểu sâu về quy trình sản xuất giày từ khâu cắt da, may, lasting đến dán đế và hoàn thiện — vì vậy chúng tôi không chỉ cung cấp sản phẩm mà còn tư vấn giải pháp kỹ thuật phù hợp cho từng công đoạn.
                 </p>
 
                 <h3 className="font-bold text-gray-800 mt-4">Lĩnh vực kinh doanh</h3>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Giày thể thao nam nữ trẻ em – sneaker, giày chạy bộ</li>
-                  <li>Giày da nam công sở – oxford, derby, loafer, boot</li>
-                  <li>Giày cao gót nữ – đế nhọn, đế vuông, platform</li>
-                  <li>Dép sandal – slides, sandal quai, dép đi biển</li>
-                  <li>Giày vải, giày bảo hộ, phụ kiện giày dép</li>
+                  <li>Máy móc thiết bị: máy may, máy cắt da CNC, máy dán đế, máy lasting, máy mài, máy ép nhiệt</li>
+                  <li>Thành phẩm: giày hoàn chỉnh OEM/ODM theo đơn hàng thương hiệu</li>
+                  <li>Đế giày: cao su SBR, PVC bơm, TPR, EVA nén, TR, da bò nguyên khối</li>
+                  <li>Hoá chất: keo PU 2 thành phần, keo neoprene, dung môi IPA, primer, hot melt</li>
+                  <li>Đế sandal: EVA nhẹ, PVC 2 lớp, cork tự nhiên, TPR outdoor, memory foam</li>
+                  <li>Sticker &amp; Charm: phản quang 3M, charm kim loại, patch thêu, nhãn PVC, huy hiệu đính đá</li>
                 </ul>
               </div>
 
-              {/* Image */}
+              {/* Images */}
               <div className="w-56 flex-shrink-0">
                 <img
-                  src="https://picsum.photos/224/168?random=200"
-                  alt="Gan Tu Company"
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=224&h=168&fit=crop"
+                  alt="Kho hàng Gan Tu"
                   className="w-full rounded border border-gray-200"
                 />
                 <img
-                  src="https://picsum.photos/224/140?random=201"
-                  alt="Nhà máy"
+                  src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=224&h=140&fit=crop"
+                  alt="Máy móc thiết bị"
                   className="w-full rounded border border-gray-200 mt-2"
                 />
               </div>
@@ -76,14 +74,14 @@ export default function GioiThieuPage() {
           {/* Stats */}
           <div className="grid grid-cols-4 gap-3">
             {[
-              { value: '500+', label: 'Mẫu giày dép', icon: '👟' },
-              { value: '50.000+', label: 'Khách hàng', icon: '👥' },
+              { value: '200+', label: 'Mã sản phẩm', icon: '📦' },
+              { value: '1.500+', label: 'Khách hàng nhà máy', icon: '🏭' },
               { value: '10 năm', label: 'Kinh nghiệm', icon: '⭐' },
-              { value: 'Freeship', label: 'Toàn quốc', icon: '🚚' },
+              { value: 'VN + TQ', label: 'Văn phòng', icon: '🌏' },
             ].map(s => (
-              <div key={s.label} className="bg-white border border-gray-200 rounded p-4 text-center hover:border-[#2e7d32] transition-colors">
+              <div key={s.label} className="bg-white border border-gray-200 rounded p-4 text-center hover:border-[#271C1C] transition-colors">
                 <div className="text-2xl mb-1">{s.icon}</div>
-                <div className="text-xl font-black text-[#2e7d32]">{s.value}</div>
+                <div className="text-xl font-black text-[#271C1C]">{s.value}</div>
                 <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
               </div>
             ))}
@@ -91,14 +89,14 @@ export default function GioiThieuPage() {
 
           {/* History timeline */}
           <div className="bg-white border border-gray-200 rounded p-5">
-            <h2 className="text-sm font-bold uppercase border-b-2 border-[#2e7d32] pb-2 mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-[#2e7d32] rounded-sm inline-block"></span>
+            <h2 className="text-sm font-bold uppercase border-b-2 border-[#271C1C] pb-2 mb-4 flex items-center gap-2">
+              <span className="w-1 h-5 bg-[#271C1C] rounded-sm inline-block"></span>
               Lịch sử hình thành
             </h2>
             <div className="space-y-3">
-              {milestones.map((m, i) => (
+              {milestones.map((m) => (
                 <div key={m.year} className="flex gap-4 items-start">
-                  <div className="w-12 h-12 bg-[#2e7d32] rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 shadow">
+                  <div className="w-12 h-12 bg-[#271C1C] rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 shadow">
                     {m.year.slice(2)}
                   </div>
                   <div className="flex-1 bg-gray-50 rounded p-3 border border-gray-100">
@@ -112,28 +110,28 @@ export default function GioiThieuPage() {
 
           {/* Certifications */}
           <div className="bg-white border border-gray-200 rounded p-5">
-            <h2 className="text-sm font-bold uppercase border-b-2 border-[#2e7d32] pb-2 mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-[#2e7d32] rounded-sm inline-block"></span>
-              Chứng nhận & Đối tác
+            <h2 className="text-sm font-bold uppercase border-b-2 border-[#271C1C] pb-2 mb-4 flex items-center gap-2">
+              <span className="w-1 h-5 bg-[#271C1C] rounded-sm inline-block"></span>
+              Cam kết & Tiêu chuẩn
             </h2>
             <div className="flex flex-wrap gap-3">
-              {['Hàng chính hãng', 'Freeship toàn quốc', 'Đổi trả 7 ngày', 'Tư vấn size miễn phí', 'Bảo hành chất lượng', 'Thanh toán COD'].map(cert => (
-                <div key={cert} className="border-2 border-green-200 rounded px-4 py-2.5 text-sm font-semibold text-gray-700 hover:border-[#2e7d32] hover:text-[#2e7d32] transition-colors flex items-center gap-2">
-                  <span className="text-green-500">✓</span> {cert}
+              {['Hàng nhập khẩu chính hãng', 'Tư vấn kỹ thuật miễn phí', 'Giao hàng toàn quốc', 'Báo giá trong 2 giờ', 'Hỗ trợ sau bán hàng', 'Đối tác CE / REACH'].map(cert => (
+                <div key={cert} className="border-2 border-stone-200 rounded px-4 py-2.5 text-sm font-semibold text-gray-700 hover:border-[#271C1C] hover:text-[#271C1C] transition-colors flex items-center gap-2">
+                  <span className="text-yellow-500">✓</span> {cert}
                 </div>
               ))}
             </div>
           </div>
 
           {/* CTA */}
-          <div className="bg-[#2e7d32] rounded p-5 text-center text-white">
-            <h3 className="font-bold text-base mb-1">Mua sắm ngay hôm nay!</h3>
-            <p className="text-green-200 text-sm mb-4">Khám phá hàng trăm mẫu giày dép thời trang, freeship toàn quốc, đổi trả dễ dàng</p>
+          <div className="bg-[#271C1C] rounded p-5 text-center text-white">
+            <h3 className="font-bold text-base mb-1">Liên hệ nhận báo giá ngay!</h3>
+            <p className="text-gray-300 text-sm mb-4">Đội ngũ kỹ thuật sẽ tư vấn sản phẩm phù hợp và báo giá trong 1–2 giờ làm việc</p>
             <div className="flex gap-3 justify-center">
-              <a href="/san-pham" className="bg-white text-[#2e7d32] px-5 py-2 rounded font-bold text-sm hover:bg-green-50 transition-colors">
-                Xem giày dép
+              <a href="/nhan-bao-gia" className="bg-yellow-400 text-gray-900 px-5 py-2 rounded font-bold text-sm hover:bg-yellow-300 transition-colors">
+                Nhận báo giá
               </a>
-              <a href="/lien-he" className="border-2 border-white text-white px-5 py-2 rounded font-bold text-sm hover:bg-white hover:text-[#2e7d32] transition-colors">
+              <a href="/lien-he" className="border-2 border-white text-white px-5 py-2 rounded font-bold text-sm hover:bg-white hover:text-[#271C1C] transition-colors">
                 Liên hệ ngay
               </a>
             </div>

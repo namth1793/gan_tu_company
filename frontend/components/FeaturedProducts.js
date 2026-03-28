@@ -2,8 +2,18 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5011/api';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { FaStar, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import ProductCard from './ProductCard';
+
+const tabs = [
+  { label: 'Tất cả',         slug: '' },
+  { label: 'Máy móc',        slug: 'may-moc' },
+  { label: 'Thành phẩm',     slug: 'thanh-pham' },
+  { label: 'Đế giày',        slug: 'de-giay' },
+  { label: 'Hoá chất',       slug: 'hoa-chat' },
+  { label: 'Đế sandal',      slug: 'de-sandal' },
+  { label: 'Sticker - Charm',slug: 'sticker-charm' },
+];
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useState([]);
@@ -26,32 +36,33 @@ export default function FeaturedProducts() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-1 h-6 bg-primary-600 rounded-full"></div>
+              <div className="w-1 h-6 bg-[#271C1C] rounded-full"></div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Sản phẩm nổi bật</h2>
             </div>
-            <p className="text-gray-500 text-sm ml-3">Những sản phẩm được khách hàng tin dùng nhiều nhất</p>
+            <p className="text-gray-500 text-sm ml-3">Máy móc &amp; nguyên phụ liệu sản xuất giày chất lượng cao</p>
           </div>
           <Link
             href="/san-pham"
-            className="hidden md:flex items-center gap-2 text-primary-600 font-semibold text-sm hover:text-primary-700 transition-colors"
+            className="hidden md:flex items-center gap-2 text-[#271C1C] font-semibold text-sm hover:text-yellow-600 transition-colors"
           >
             Xem tất cả <FaArrowRight className="text-xs" />
           </Link>
         </div>
 
-        {/* Top bar */}
+        {/* Category tabs */}
         <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
-          {['Tất cả', 'Máy CNC', 'Máy ép', 'Thiết bị điện', 'Dây chuyền'].map(label => (
-            <button
-              key={label}
+          {tabs.map(tab => (
+            <Link
+              key={tab.label}
+              href={tab.slug ? `/san-pham?cat=${tab.slug}` : '/san-pham'}
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
-                label === 'Tất cả'
-                  ? 'bg-primary-600 text-white border-primary-600'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-primary-400 hover:text-primary-600'
+                tab.slug === ''
+                  ? 'bg-[#271C1C] text-white border-[#271C1C]'
+                  : 'bg-white text-gray-600 border-gray-200 hover:border-[#271C1C] hover:text-[#271C1C]'
               }`}
             >
-              {label}
-            </button>
+              {tab.label}
+            </Link>
           ))}
         </div>
 
@@ -80,7 +91,7 @@ export default function FeaturedProducts() {
         <div className="mt-6 text-center md:hidden">
           <Link
             href="/san-pham"
-            className="inline-flex items-center gap-2 text-primary-600 font-semibold border border-primary-600 px-6 py-2.5 rounded-lg hover:bg-primary-50 transition-colors"
+            className="inline-flex items-center gap-2 text-[#271C1C] font-semibold border border-[#271C1C] px-6 py-2.5 rounded-lg hover:bg-stone-100 transition-colors"
           >
             Xem tất cả sản phẩm <FaArrowRight />
           </Link>

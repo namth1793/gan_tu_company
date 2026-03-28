@@ -4,14 +4,12 @@ import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
 
 const productCategories = [
-  'Máy ép thủy lực',
-  'Máy CNC phay/tiện',
-  'Dây chuyền sản xuất',
-  'Thiết bị cơ khí',
-  'Vật tư công nghiệp',
-  'Keo & Hóa chất',
-  'Khuôn mẫu',
-  'Thiết bị điện',
+  'Máy móc',
+  'Thành phẩm (giày hoàn chỉnh)',
+  'Đế giày (cao su, PVC, TPR, EVA, TR)',
+  'Hoá chất (keo dán, dung môi, primer)',
+  'Đế sandal (EVA, cork, TPR, memory foam)',
+  'Sticker - Charm (phản quang, charm, patch)',
   'Khác',
 ];
 

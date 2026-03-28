@@ -22,7 +22,7 @@ export default function TopBanner() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: "url('/world-map.svg')",
-          backgroundSize: 'cover',
+          backgroundSize: '100% 100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}

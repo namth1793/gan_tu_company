@@ -15,8 +15,22 @@ export default function TopBanner() {
   };
 
   return (
-    <div className="bg-white border-b border-gray-200">
-      <div className="max-w-[1200px] mx-auto px-4 py-4 flex items-center gap-4">
+    /* World map covers the entire banner width */
+    <div className="bg-white border-b border-gray-200 relative overflow-hidden">
+      {/* World map background — full banner width */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/world-map.svg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 py-4 flex items-center gap-4">
 
         {/* TRÁI: Logo xoay ngang liên tục */}
         <Link href="/" className="flex-shrink-0 hover:opacity-90 transition-opacity">
@@ -30,60 +44,45 @@ export default function TopBanner() {
           />
         </Link>
 
-        {/* GIỮA: Tên công ty + Search — world map background #EAEAEA */}
-        <div className="flex-1 flex flex-col items-center gap-2 relative overflow-hidden rounded-lg py-3 px-2">
-          {/* World map background */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: "url('/world-map.svg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-            aria-hidden="true"
-          />
+        {/* GIỮA: Tên công ty + Search */}
+        <div className="flex-1 flex flex-col items-center gap-2">
+          <Link href="/" className="text-center group">
+            <h1 className="text-[#271C1C] font-black text-xl tracking-wide uppercase leading-tight group-hover:text-yellow-500 transition-colors drop-shadow-sm">
+              CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI GAN TU
+            </h1>
+            <p className="text-gray-500 text-xs tracking-widest uppercase mt-0.5">
+              Máy Móc &amp; Nguyên Phụ Liệu Sản Xuất Giày
+            </p>
+          </Link>
 
-          {/* Content on top of map */}
-          <div className="relative z-10 w-full flex flex-col items-center gap-2">
-            <Link href="/" className="text-center group">
-              <h1 className="text-[#271C1C] font-black text-xl tracking-wide uppercase leading-tight group-hover:text-yellow-500 transition-colors drop-shadow-sm">
-                CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI GAN TU
-              </h1>
-              <p className="text-gray-500 text-xs tracking-widest uppercase mt-0.5">
-                Máy Móc &amp; Nguyên Phụ Liệu Sản Xuất Giày
-              </p>
-            </Link>
-
-            {/* Search bar */}
-            <form onSubmit={handleSearch} className="flex w-full max-w-xl rounded overflow-hidden shadow-lg">
-              <select
-                value={category}
-                onChange={e => setCategory(e.target.value)}
-                className="bg-white text-gray-700 text-sm px-2 border-r border-gray-200 focus:outline-none h-10 cursor-pointer"
-              >
-                <option value="">Tất cả</option>
-                <option value="may-moc">Máy móc</option>
-                <option value="thanh-pham">Thành phẩm</option>
-                <option value="de-giay">Đế giày</option>
-                <option value="hoa-chat">Hoá chất</option>
-                <option value="de-sandal">Đế sandal</option>
-                <option value="sticker-charm">Sticker - Charm</option>
-              </select>
-              <input
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                placeholder="Tìm kiếm sản phẩm..."
-                className="flex-1 px-3 text-sm h-10 focus:outline-none text-gray-700 bg-white"
-              />
-              <button
-                type="submit"
-                className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-5 h-10 text-sm font-bold transition-colors"
-              >
-                🔍 Tìm
-              </button>
-            </form>
-          </div>
+          {/* Search bar */}
+          <form onSubmit={handleSearch} className="flex w-full max-w-xl rounded overflow-hidden shadow-lg">
+            <select
+              value={category}
+              onChange={e => setCategory(e.target.value)}
+              className="bg-white text-gray-700 text-sm px-2 border-r border-gray-200 focus:outline-none h-10 cursor-pointer"
+            >
+              <option value="">Tất cả</option>
+              <option value="may-moc">Máy móc</option>
+              <option value="thanh-pham">Thành phẩm</option>
+              <option value="de-giay">Đế giày</option>
+              <option value="hoa-chat">Hoá chất</option>
+              <option value="de-sandal">Đế sandal</option>
+              <option value="sticker-charm">Sticker - Charm</option>
+            </select>
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="Tìm kiếm sản phẩm..."
+              className="flex-1 px-3 text-sm h-10 focus:outline-none text-gray-700 bg-white"
+            />
+            <button
+              type="submit"
+              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-5 h-10 text-sm font-bold transition-colors"
+            >
+              🔍 Tìm
+            </button>
+          </form>
         </div>
 
         {/* PHẢI: Hotline */}

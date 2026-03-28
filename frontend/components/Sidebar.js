@@ -4,14 +4,12 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
 const categories = [
-  { id: 1, name: 'Giày thể thao', slug: 'giay-the-thao', icon: '👟' },
-  { id: 2, name: 'Giày da nam', slug: 'giay-da-nam', icon: '👞' },
-  { id: 3, name: 'Giày cao gót', slug: 'giay-cao-got', icon: '👠' },
-  { id: 4, name: 'Dép & Sandal', slug: 'dep-sandal', icon: '🩴' },
-  { id: 5, name: 'Giày trẻ em', slug: 'giay-tre-em', icon: '👟' },
-  { id: 6, name: 'Giày vải', slug: 'giay-vai', icon: '👟' },
-  { id: 7, name: 'Giày bảo hộ', slug: 'giay-bao-ho', icon: '🦺' },
-  { id: 8, name: 'Phụ kiện giày', slug: 'phu-kien-giay', icon: '🎀' },
+  { id: 1, name: 'Máy móc',         slug: 'may-moc',       icon: '⚙️' },
+  { id: 2, name: 'Thành phẩm',      slug: 'thanh-pham',    icon: '👟' },
+  { id: 3, name: 'Đế giày',         slug: 'de-giay',       icon: '🔲' },
+  { id: 4, name: 'Hoá chất',        slug: 'hoa-chat',      icon: '🧪' },
+  { id: 5, name: 'Đế sandal',       slug: 'de-sandal',     icon: '🩴' },
+  { id: 6, name: 'Sticker - Charm', slug: 'sticker-charm', icon: '✨' },
 ];
 
 export default function Sidebar() {
@@ -51,7 +49,6 @@ export default function Sidebar() {
         <div className="text-xs mt-1 text-gray-400">Thứ 2 - Thứ 7: 8:00 - 17:30</div>
       </div>
 
-      {/* Quick links box */}
       {/* Bản đồ */}
       <div className="mt-3 bg-white border border-gray-200 rounded overflow-hidden">
         <div className="bg-[#271C1C] px-3 py-2">

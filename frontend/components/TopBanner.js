@@ -21,7 +21,7 @@ export default function TopBanner() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/world-map.svg')",
+          backgroundImage: "url('/map.png')",
           backgroundSize: '100% 100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

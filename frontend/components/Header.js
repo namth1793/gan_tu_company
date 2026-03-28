@@ -4,11 +4,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { label: 'Trang chủ', href: '/' },
-  { label: 'Giới thiệu', href: '/gioi-thieu' },
-  { label: 'Sản phẩm', href: '/san-pham', hasDropdown: true },
-  { label: 'Tin tức', href: '/tin-tuc' },
-  { label: 'Liên hệ', href: '/lien-he' },
+  { label: 'Trang chủ',         href: '/' },
+  { label: 'Giới thiệu',        href: '/gioi-thieu' },
+  { label: 'Sản phẩm',          href: '/san-pham', hasDropdown: true },
+  { label: 'Dịch vụ',           href: '/dich-vu' },
+  { label: 'Hồ sơ năng lực',    href: '/ho-so-nang-luc' },
+  { label: 'Tin tức',           href: '/tin-tuc' },
+  { label: 'Video',             href: '/video' },
+  { label: 'Hỗ trợ',           href: '/ho-tro' },
+  { label: 'Liên hệ',          href: '/lien-he' },
 ];
 
 const dropdownCategories = [

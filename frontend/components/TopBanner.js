@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import mapBg from '../assets/map.png';
 
 export default function TopBanner() {
   const [search, setSearch] = useState('');
@@ -21,7 +20,7 @@ export default function TopBanner() {
       {/* World map background — full banner width */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <Image
-          src={mapBg}
+          src="/map.png"
           alt=""
           fill
           className="object-cover"

@@ -29,6 +29,13 @@ module.exports = {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
+      scale: {
+        '108': '1.08',
+      },
+      transitionDuration: {
+        '250': '250ms',
+        '350': '350ms',
+      },
     },
   },
   plugins: [],

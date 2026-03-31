@@ -2,7 +2,7 @@ import Sidebar from '@/components/Sidebar';
 
 export const metadata = {
   title: 'Giới thiệu - Gan Tu | Máy Móc & Nguyên Phụ Liệu Sản Xuất Giày',
-  description: 'Gan Tu chuyên cung cấp máy móc, đế giày, hoá chất dán đế, đế sandal, sticker charm cho ngành sản xuất giày. Hơn 10 năm kinh nghiệm, đối tác Nhật - Đài Loan - Trung Quốc.',
+  description: 'Gan Tu chuyên cung cấp máy móc, đế giày, hoá chất dán đế, đế sandal, khuôn mold cho ngành sản xuất giày. Hơn 10 năm kinh nghiệm, đối tác Nhật - Đài Loan - Trung Quốc.',
 };
 
 export default function GioiThieuPage() {
@@ -51,7 +51,7 @@ export default function GioiThieuPage() {
                   <li>Đế giày: cao su SBR, PVC bơm, TPR, EVA nén, TR, da bò nguyên khối</li>
                   <li>Hoá chất: keo PU 2 thành phần, keo neoprene, dung môi IPA, primer, hot melt</li>
                   <li>Đế sandal: EVA nhẹ, PVC 2 lớp, cork tự nhiên, TPR outdoor, memory foam</li>
-                  <li>Sticker &amp; Charm: phản quang 3M, charm kim loại, patch thêu, nhãn PVC, huy hiệu đính đá</li>
+                  <li>Khuôn / Mold: khuôn đế cao su lưu hoá, khuôn đế EVA phun ép, khuôn khóa giày, khuôn carbon fiber</li>
                 </ul>
               </div>
 

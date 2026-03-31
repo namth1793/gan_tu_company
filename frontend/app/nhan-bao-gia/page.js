@@ -9,7 +9,7 @@ const productCategories = [
   'Đế giày (cao su, PVC, TPR, EVA, TR)',
   'Hoá chất (keo dán, dung môi, primer)',
   'Đế sandal (EVA, cork, TPR, memory foam)',
-  'Sticker - Charm (phản quang, charm, patch)',
+  'Khuôn / Mold (khuôn đế cao su, EVA, khóa, carbon)',
   'Khác',
 ];
 

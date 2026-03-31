@@ -27,7 +27,7 @@ const capabilities = [
   },
   {
     title: 'Nguyên phụ liệu',
-    desc: 'Đế giày, đế sandal, hoá chất, keo dán, sticker, charm và các phụ kiện trang trí đa dạng mẫu mã.',
+    desc: 'Đế giày, đế sandal, hoá chất, keo dán, khuôn đế và các phụ kiện sản xuất giày đa dạng mẫu mã.',
   },
   {
     title: 'Tư vấn & hỗ trợ kỹ thuật',

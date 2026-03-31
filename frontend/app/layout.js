@@ -7,7 +7,7 @@ import FloatingContact from '@/components/FloatingContact';
 
 export const metadata = {
   title: 'Gan Tu - Máy Móc & Nguyên Phụ Liệu Sản Xuất Giày',
-  description: 'Gan Tu chuyên cung cấp máy móc, đế giày, hoá chất, đế sandal, sticker charm cho ngành sản xuất giày. Liên hệ 0902 487 928.',
+  description: 'Gan Tu chuyên cung cấp máy móc, đế giày, hoá chất, đế sandal, khuôn mold cho ngành sản xuất giày. Liên hệ 0902 487 928.',
 };
 
 export default function RootLayout({ children }) {

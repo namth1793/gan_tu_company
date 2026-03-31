@@ -29,28 +29,31 @@ export default function VideoNewsSection() {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded p-3">
-      <div className="flex gap-4">
+    <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-4">
+      <div className="flex gap-5">
         {/* Left: video + news list */}
         <div className="flex-1 min-w-0">
-          <SectionTitle title="Video giới thiệu" href="#" />
+          <SectionTitle title="Video giới thiệu" href="/video" />
 
           {/* Video thumbnail */}
-          <div className="relative bg-gray-900 rounded overflow-hidden mb-4" style={{ paddingBottom: '56.25%' }}>
+          <div className="relative bg-gray-900 rounded-lg overflow-hidden mb-4 cursor-pointer group" style={{ paddingBottom: '56.25%' }}>
             <div className="absolute inset-0">
               <img
                 src="https://picsum.photos/600/338?random=100"
                 alt="Video giới thiệu Gan Tu"
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-300"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <button className="w-14 h-14 bg-[#271C1C] hover:bg-[#1a1010] rounded-full flex items-center justify-center shadow-xl transition-colors group">
-                  <svg className="w-7 h-7 text-white ml-1 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-xl transition-all group-hover:scale-110 border border-white/30">
+                  <svg className="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
-                </button>
-                <span className="text-white text-xs mt-2 bg-black bg-opacity-40 px-3 py-1 rounded">
-                  Gan Tu - Giới thiệu công ty
+                </div>
+              </div>
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="text-white text-xs font-semibold bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  Gan Tu – Giới thiệu công ty
                 </span>
               </div>
             </div>
@@ -59,23 +62,33 @@ export default function VideoNewsSection() {
           {/* News list */}
           <SectionTitle title="Tin tức mới nhất" href="/tin-tuc" />
           <div className="space-y-2">
-            {displayNews.slice(0, 4).map(n => (
+            {displayNews.slice(0, 4).map((n, i) => (
               <a
                 key={n.id}
                 href={`/tin-tuc/${n.slug || n.id}`}
-                className="flex gap-2 hover:bg-gray-50 rounded p-1 transition-colors group"
+                className="flex gap-3 p-2 rounded-lg hover:bg-amber-50 transition-all group hover:-translate-y-px"
               >
-                <img
-                  src={n.image_url || `https://picsum.photos/80/60?random=${n.id}`}
-                  alt={n.title}
-                  className="w-16 h-12 object-cover rounded flex-shrink-0"
-                  loading="lazy"
-                />
-                <div className="min-w-0">
+                <div className="relative w-16 h-12 rounded-md overflow-hidden flex-shrink-0">
+                  <img
+                    src={n.image_url || `https://picsum.photos/80/60?random=${n.id}`}
+                    alt={n.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  {i === 0 && (
+                    <span className="absolute top-0 left-0 bg-red-500 text-white text-[8px] font-bold px-1 py-0.5">MỚI</span>
+                  )}
+                </div>
+                <div className="min-w-0 flex flex-col justify-center">
                   <p className="text-xs font-semibold text-gray-800 line-clamp-2 group-hover:text-[#271C1C] transition-colors leading-snug">
                     {n.title}
                   </p>
-                  <p className="text-[10px] text-gray-400 mt-0.5">{formatDate(n.created_at)}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5 flex items-center gap-1">
+                    <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {formatDate(n.created_at)}
+                  </p>
                 </div>
               </a>
             ))}
@@ -90,20 +103,27 @@ export default function VideoNewsSection() {
               <a
                 key={n.id}
                 href={`/tin-tuc/${n.slug || n.id}`}
-                className="block border border-gray-100 rounded overflow-hidden hover:shadow-md hover:border-yellow-400 transition-all group"
+                className="block rounded-lg overflow-hidden border border-gray-100 hover:shadow-md hover:border-amber-200 transition-all group hover:-translate-y-0.5"
               >
-                <img
-                  src={n.image_url || `https://picsum.photos/230/120?random=${n.id + 50}`}
-                  alt={n.title}
-                  className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-200"
-                  loading="lazy"
-                />
-                <div className="p-2">
+                <div className="overflow-hidden h-24 relative">
+                  <img
+                    src={n.image_url || `https://picsum.photos/230/120?random=${n.id + 50}`}
+                    alt={n.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                </div>
+                <div className="p-2.5">
                   <p className="text-xs font-semibold text-gray-800 line-clamp-2 group-hover:text-[#271C1C] transition-colors leading-snug">
                     {n.title}
                   </p>
-                  <p className="text-[10px] text-gray-500 line-clamp-2 mt-1">{n.excerpt}</p>
-                  <p className="text-[10px] text-gray-400 mt-1">{formatDate(n.created_at)}</p>
+                  <p className="text-[10px] text-gray-400 mt-1.5 flex items-center gap-1">
+                    <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {formatDate(n.created_at)}
+                  </p>
                 </div>
               </a>
             ))}

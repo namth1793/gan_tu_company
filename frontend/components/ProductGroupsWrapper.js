@@ -2,7 +2,7 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5011/api';
 import { useState, useEffect } from 'react';
 import ProductGroup from './ProductGroup';
-import { FaCog, FaShoePrints, FaLayerGroup, FaFlask, FaLeaf, FaStar } from 'react-icons/fa';
+import { FaCog, FaShoePrints, FaLayerGroup, FaFlask, FaLeaf, FaCubes } from 'react-icons/fa';
 
 const groupConfigs = [
   { categoryId: 1, slug: 'may-moc',       title: 'Máy móc',         icon: FaCog },
@@ -10,7 +10,7 @@ const groupConfigs = [
   { categoryId: 3, slug: 'de-giay',       title: 'Đế giày',         icon: FaLayerGroup },
   { categoryId: 4, slug: 'hoa-chat',      title: 'Hoá chất',        icon: FaFlask },
   { categoryId: 5, slug: 'de-sandal',     title: 'Đế sandal',       icon: FaLeaf },
-  { categoryId: 6, slug: 'sticker-charm', title: 'Sticker - Charm', icon: FaStar },
+  { categoryId: 6, slug: 'khuon-mold',    title: 'Khuôn / Mold',    icon: FaCubes },
 ];
 
 export default function ProductGroupsWrapper() {

@@ -44,17 +44,23 @@ export default function ProductGrid({ title, categorySlug, limit = 8, showPagina
   const sectionHref = `/san-pham${categorySlug ? `?cat=${categorySlug}` : ''}`;
 
   return (
-    <div className="bg-white border border-gray-200 rounded p-3">
+    <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-4">
       <SectionTitle title={title} href={sectionHref} />
 
       {loading ? (
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-4 gap-3">
           {Array.from({ length: limit }, (_, i) => (
-            <div key={i} className="bg-gray-100 rounded animate-pulse aspect-square" />
+            <div key={i} className="rounded-lg overflow-hidden">
+              <div className="aspect-square bg-gray-100 animate-pulse" />
+              <div className="p-2 space-y-1.5">
+                <div className="h-2.5 bg-gray-100 animate-pulse rounded" />
+                <div className="h-2.5 bg-gray-100 animate-pulse rounded w-2/3 mx-auto" />
+              </div>
+            </div>
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-4 gap-3">
           {products.slice(0, limit).map(p => (
             <ProductCard key={p.id} product={p} />
           ))}
@@ -62,20 +68,30 @@ export default function ProductGrid({ title, categorySlug, limit = 8, showPagina
       )}
 
       {showPagination && totalPages > 1 && (
-        <div className="flex gap-1 justify-center mt-3">
+        <div className="flex gap-1.5 justify-center mt-4 pt-3 border-t border-gray-100">
+          <button
+            onClick={() => setPage(p => Math.max(1, p - 1))}
+            disabled={page === 1}
+            className="w-8 h-8 text-xs font-bold rounded-lg bg-gray-100 text-gray-600 hover:bg-[#271C1C] hover:text-white disabled:opacity-30 transition-all"
+          >‹</button>
           {Array.from({ length: Math.min(totalPages, 8) }, (_, i) => i + 1).map(n => (
             <button
               key={n}
               onClick={() => setPage(n)}
-              className={`w-7 h-7 text-xs font-bold rounded transition-colors ${
+              className={`w-8 h-8 text-xs font-bold rounded-lg transition-all ${
                 page === n
-                  ? 'bg-[#271C1C] text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-green-100 hover:text-[#271C1C]'
+                  ? 'bg-[#271C1C] text-white shadow-md'
+                  : 'bg-gray-100 text-gray-700 hover:bg-amber-100 hover:text-[#271C1C]'
               }`}
             >
               {n}
             </button>
           ))}
+          <button
+            onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+            className="w-8 h-8 text-xs font-bold rounded-lg bg-gray-100 text-gray-600 hover:bg-[#271C1C] hover:text-white disabled:opacity-30 transition-all"
+          >›</button>
         </div>
       )}
     </div>

@@ -22,7 +22,7 @@ export default function HomePage() {
           <ProductGrid title="ĐẾ GIÀY" categorySlug="de-giay" limit={8} showPagination />
           <ProductGrid title="HOÁ CHẤT" categorySlug="hoa-chat" limit={8} />
           <ProductGrid title="ĐẾ SANDAL" categorySlug="de-sandal" limit={8} />
-          <ProductGrid title="STICKER - CHARM" categorySlug="sticker-charm" limit={8} showPagination />
+          <ProductGrid title="KHUÔN / MOLD" categorySlug="khuon-mold" limit={8} showPagination />
           <ContactBanner />
         </div>
       </div>

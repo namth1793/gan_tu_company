@@ -9,8 +9,8 @@ body { font-family: 'Roboto', sans-serif; background: #f5f5f5; }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #2e7d32; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #1b5e20; }
+::-webkit-scrollbar-thumb { background: #3d2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a13b; }
 
 html { scroll-behavior: smooth; }
 

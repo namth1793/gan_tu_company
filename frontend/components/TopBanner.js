@@ -67,7 +67,7 @@ export default function TopBanner() {
               <option value="de-giay">Đế giày</option>
               <option value="hoa-chat">Hoá chất</option>
               <option value="de-sandal">Đế sandal</option>
-              <option value="sticker-charm">Sticker - Charm</option>
+              <option value="khuon-mold">Khuôn / Mold</option>
             </select>
             <input
               value={search}

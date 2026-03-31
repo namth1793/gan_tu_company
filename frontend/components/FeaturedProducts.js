@@ -12,7 +12,7 @@ const tabs = [
   { label: 'Đế giày',        slug: 'de-giay' },
   { label: 'Hoá chất',       slug: 'hoa-chat' },
   { label: 'Đế sandal',      slug: 'de-sandal' },
-  { label: 'Sticker - Charm',slug: 'sticker-charm' },
+  { label: 'Khuôn / Mold',   slug: 'khuon-mold' },
 ];
 
 export default function FeaturedProducts() {
